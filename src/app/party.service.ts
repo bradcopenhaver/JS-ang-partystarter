@@ -14,4 +14,7 @@ export class PartyService {
     return this.parties;
   }
 
+  getPartyById(partyId: string){
+    return this.angularFire.database.object('parties/' + partyId);
+  }
 }

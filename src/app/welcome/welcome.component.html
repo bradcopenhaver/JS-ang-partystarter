@@ -1,5 +1,5 @@
 <h3>Parties:</h3>
-<div *ngFor="let party of parties | async">
+<div *ngFor="let party of parties | async" (click)="gotToDetailPage(party)">
   <h4>{{party.name}}</h4>
   <p>Host: {{party.host}}</p>
   <p>Date: {{party.date}}</p>
