@@ -6,13 +6,11 @@ import { ActivatedRoute, Params } from '@angular/router';
 import { Location } from '@angular/common';
 import { FirebaseObjectObservable } from 'angularfire2';
 
-
-
 @Component({
   selector: 'app-party-detail',
   templateUrl: './party-detail.component.html',
   styleUrls: ['./party-detail.component.css'],
-  providers:  [PartyService],
+  providers:  [PartyService]
 })
 export class PartyDetailComponent implements OnInit {
   partyId: string;

@@ -12,6 +12,7 @@ import { Router } from '@angular/router';
 })
 export class WelcomeComponent implements OnInit {
   parties: FirebaseListObservable<any[]>;
+  partyFilter: string = "Birthday Party";
 
   constructor(private router: Router, private partyService: PartyService) { }
 
@@ -19,7 +20,11 @@ export class WelcomeComponent implements OnInit {
     this.parties = this.partyService.getParties();
   }
 
+  onChange(optionFromMenu) {
+    this.partyFilter = optionFromMenu;
+  }
+
   goToDetailPage(clickedParty){
-    this.router.navigate(['parties', clickedParty.$key]);
+    this.router.navigate(['party-detail', clickedParty.$key]);
   }
 }

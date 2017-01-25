@@ -9,6 +9,7 @@ import { routing } from './app.routing';
 import { AppComponent } from './app.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { PartyDetailComponent } from './party-detail/party-detail.component';
+import { PartyTypePipe } from './partyType.pipe';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -21,7 +22,8 @@ export const firebaseConfig = {
   declarations: [
     AppComponent,
     WelcomeComponent,
-    PartyDetailComponent
+    PartyDetailComponent,
+    PartyTypePipe
   ],
   imports: [
     BrowserModule,

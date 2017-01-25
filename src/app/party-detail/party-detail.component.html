@@ -1,3 +1,9 @@
-<p>
-  party-detail works!
-</p>
+<div>
+  <h3>{{(partyToDisplay | async)?.name}}</h3>
+  <h4>{{(partyToDisplay | async)?.type}}</h4>
+  <h4>{{(partyToDisplay | async)?.host}}</h4>
+  <h4>{{(partyToDisplay | async)?.goal}}</h4>
+  <h4>{{(partyToDisplay | async)?.location}}</h4>
+  <h4>{{(partyToDisplay | async)?.details}}</h4>
+  <h4>{{(partyToDisplay | async)?.date}}</h4>
+</div>
