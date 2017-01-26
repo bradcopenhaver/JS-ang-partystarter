@@ -40,6 +40,10 @@ export class PartyService {
     currentParty.update({currentFunding: updatedFunding});
   }
 
+  deleteParty(localPartyToDelete){
+    var partyEntryInFirebase = this.getPartyById(localPartyToDelete.$key);
+    partyEntryInFirebase.remove();
+  }
 }
 
 // edit (key, currentFundingh)

@@ -23,4 +23,9 @@ export class EditPartyComponent implements OnInit {
     this.partyService.updateParty(this.selectedParty);
     this.formVisibility = "hidden";
   }
+  beginDeletingParty(partyToDelete){
+    if(confirm("Are you sure?")){
+      this.partyService.deleteParty(partyToDelete);
+    }
+  }
 }
