@@ -1,10 +1,11 @@
 <h3>Parties:</h3>
 <select (change)="onChange($event.target.value)">
+  <option selected="selected"> </option>
   <option>Reunion</option>
   <option>Office Party</option>
-  <option selected="selected">Birthday Party</option>
+  <option>Birthday Party</option>
 </select>
-<div *ngFor="let party of parties | async" >
+<div *ngFor="let party of parties | async | partyType:partyFilter" >
   <h4 (click)="goToDetailPage(party)">{{party.name}}</h4>
   <p>Host: {{party.host}}</p>
   <p>Date: {{party.date}}</p>

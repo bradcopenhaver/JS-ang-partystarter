@@ -9,20 +9,18 @@ import { AngularFire, FirebaseListObservable } from 'angularfire2';
 })
 export class PartyTypePipe implements PipeTransform {
 
-  transform(input: any, partyType: string) {
-    console.log(input);
-    var output: any[] = [];
-    input.forEach(party => {
-      party.forEach(indParty => {
-        console.log(indParty.type);
-        console.log(partyType);
-        debugger;
-        if (indParty.type === partyType) {
-          output.push(indParty);
-        }
-      });
-    });
-
-    return output;
+  transform(input: any[], partyType: string) {
+    var output: Party[] = [];
+    if (input != null) {
+    if (partyType != "") {
+        for (var i= 0; i < input.length; i++) {
+          if (input[i].type === partyType) {
+            output.push(input[i]);
+          }
+        };
+        return output;
+      };
+      return input;
+    }
   }
 }

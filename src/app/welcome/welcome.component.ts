@@ -12,7 +12,7 @@ import { Router } from '@angular/router';
 })
 export class WelcomeComponent implements OnInit {
   parties: FirebaseListObservable<any[]>;
-  partyFilter: string = "Birthday Party";
+  partyFilter: string = "";
 
   constructor(private router: Router, private partyService: PartyService) { }
 
