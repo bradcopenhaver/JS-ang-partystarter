@@ -17,4 +17,12 @@ export class PartyService {
   getPartyById(partyId: string){
     return this.angularFire.database.object('parties/' + partyId);
   }
+
+  updateParty(localUpdatedParty){
+    var partyEntryInFirebase = this.getPartyById(localUpdatedParty.$key);
+    partyEntryInFirebase.update({title: localUpdatedParty.title,
+                                artist: localUpdatedParty.artist,
+                                description: localUpdatedParty.description});
+  }
+
 }

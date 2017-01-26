@@ -6,4 +6,8 @@
   <h4>{{(partyToDisplay | async)?.location}}</h4>
   <h4>{{(partyToDisplay | async)?.details}}</h4>
   <h4>{{(partyToDisplay | async)?.date}}</h4>
+  <h4>{{(partyToDisplay | async)?.currentFunding}}</h4>
+</div>
+<div>
+  <app-contribute [selectedParty]="party"></app-contribute>
 </div>

@@ -10,6 +10,7 @@ import { AppComponent } from './app.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { PartyDetailComponent } from './party-detail/party-detail.component';
 import { PartyTypePipe } from './partyType.pipe';
+import { ContributeComponent } from './contribute/contribute.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -23,7 +24,8 @@ export const firebaseConfig = {
     AppComponent,
     WelcomeComponent,
     PartyDetailComponent,
-    PartyTypePipe
+    PartyTypePipe,
+    ContributeComponent
   ],
   imports: [
     BrowserModule,
