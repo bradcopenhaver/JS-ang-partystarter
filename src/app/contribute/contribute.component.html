@@ -3,7 +3,7 @@
 </p>
 
 <label>How much?</label>
-<input>
+<input #amount>
 <br>
 <br>
-<button (click)="beginUpdatingParty(selectedParty)">Update</button>
+<button (click)="contributeToParty(selectedParty, amount.value)">Contribute</button>

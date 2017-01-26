@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Party } from './party.model';
-import { AngularFire, FirebaseListObservable } from 'angularfire2';
+import { AngularFire, FirebaseListObservable, FirebaseObjectObservable } from 'angularfire2';
 
 @Injectable()
 export class PartyService {
@@ -25,4 +25,14 @@ export class PartyService {
                                 description: localUpdatedParty.description});
   }
 
+  updatePartyFunds(currentParty: FirebaseObjectObservable<any>, amountOfFunds: number) {
+    var updatedFunding: number;
+    currentParty.subscribe(x => {updatedFunding = parseInt(x.currentFunding) + amountOfFunds});
+    // var currentPartyFunds = partyEntryInFirebase.object('currentFunding/');
+    // var totalFunds = partyEntryInFirebase + amountOfFunds;
+    currentParty.update({currentFunding: updatedFunding});
+  }
+
 }
+
+// edit (key, currentFundingh)
