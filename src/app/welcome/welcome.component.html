@@ -7,7 +7,8 @@
 </select>
 <div *ngFor="let party of parties | async | partyType:partyFilter" >
   <h4 (click)="goToDetailPage(party)">{{party.name}}</h4>
-  <p>Host: {{party.host}}</p>
-  <p>Date: {{party.date}}</p>
-  <p>Goal: ${{party.goal}}</p>
+  <p *ngIf="currentRoute != '/admin'">Host: {{party.host}}</p>
+  <p *ngIf="currentRoute != '/admin'">Date: {{party.date}}</p>
+  <p *ngIf="currentRoute != '/admin'">Goal: ${{party.goal}}</p>
+  <span *ngIf ="currentRoute === '/admin'"><app-edit-party [selectedParty]="party"></app-edit-party></span>
 </div>

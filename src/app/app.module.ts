@@ -12,6 +12,8 @@ import { PartyDetailComponent } from './party-detail/party-detail.component';
 import { PartyTypePipe } from './partyType.pipe';
 import { ContributeComponent } from './contribute/contribute.component';
 import { AddPartyComponent } from './add-party/add-party.component';
+import { AdminComponent } from './admin/admin.component';
+import { EditPartyComponent } from './edit-party/edit-party.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -27,7 +29,9 @@ export const firebaseConfig = {
     PartyDetailComponent,
     PartyTypePipe,
     ContributeComponent,
-    AddPartyComponent
+    AddPartyComponent,
+    AdminComponent,
+    EditPartyComponent
   ],
   imports: [
     BrowserModule,

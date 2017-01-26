@@ -13,6 +13,8 @@ import { Router } from '@angular/router';
 export class WelcomeComponent implements OnInit {
   parties: FirebaseListObservable<any[]>;
   partyFilter: string = "";
+  currentRoute: string = this.router.url;
+
 
   constructor(private router: Router, private partyService: PartyService) { }
 

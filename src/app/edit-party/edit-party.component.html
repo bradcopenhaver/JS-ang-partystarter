@@ -1,0 +1,45 @@
+<button (click)="showEditForm()">Edit</button>
+<div [class]="formVisibility">
+  <div>
+    <label>Name:</label>
+    <br>
+    <input [(ngModel)]="selectedParty.name">
+  </div>
+
+  <div>
+    <label>Party Type</label>
+    <br>
+    <input [(ngModel)]="selectedParty.type">
+  </div>
+
+  <div>
+    <label>Party Host:</label>
+    <br>
+    <input [(ngModel)]="selectedParty.host">
+  </div>
+
+  <div>
+    <label>Party Goal:</label>
+    <br>
+    <input [(ngModel)]="selectedParty.goal">
+  </div>
+
+  <div>
+    <label>Party Location:</label>
+    <br>
+    <input [(ngModel)]="selectedParty.location">
+  </div>
+
+  <div>
+    <label>Party Details:</label>
+    <br>
+    <input [(ngModel)]="selectedParty.details">
+  </div>
+
+  <div>
+    <label>Party Date:</label>
+    <br>
+    <input [(ngModel)]="selectedParty.date">
+  </div>
+  <button (click)="doneEditting()">Done</button>
+</div>

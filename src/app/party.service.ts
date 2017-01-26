@@ -24,9 +24,14 @@ export class PartyService {
 
   updateParty(localUpdatedParty){
     var partyEntryInFirebase = this.getPartyById(localUpdatedParty.$key);
-    partyEntryInFirebase.update({title: localUpdatedParty.title,
-                                artist: localUpdatedParty.artist,
-                                description: localUpdatedParty.description});
+    partyEntryInFirebase.update({name: localUpdatedParty.name,
+                                type: localUpdatedParty.type,
+                                host: localUpdatedParty.host,
+                                goal: localUpdatedParty.goal,
+                                details: localUpdatedParty.details,
+                                location: localUpdatedParty.location,
+                                date: localUpdatedParty.date}
+                              );
   }
 
   updatePartyFunds(currentParty: FirebaseObjectObservable<any>, amountOfFunds: number) {
