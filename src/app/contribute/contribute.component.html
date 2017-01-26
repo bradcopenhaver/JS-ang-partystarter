@@ -1,9 +1,12 @@
-<p>
-  contribute works!
-</p>
-
-<label>How much?</label>
-<input #amount>
-<br>
-<br>
-<button (click)="contributeToParty(selectedParty, amount.value)">Contribute</button>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Contribute</h3>
+  </div>
+  <div class="panel-body">
+    <label>How much?</label>
+    <input #amount>
+    <br>
+    <br>
+    <button (click)="contributeToParty(selectedParty, amount.value)">Contribute</button>
+  </div>
+</div>

@@ -9,7 +9,11 @@
   <div>
     <label>Party Type</label>
     <br>
-    <input [(ngModel)]="selectedParty.type">
+    <select [(ngModel)]="selectedParty.type">
+      <option selected="selected">Birthday Party</option>
+      <option>Office Party</option>
+      <option>Reunion</option>
+    </select>
   </div>
 
   <div>

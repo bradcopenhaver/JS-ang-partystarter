@@ -15,7 +15,10 @@ export class PartyService {
   }
 
   addParty(newParty: Party) {
-    this.parties.push(newParty);
+    var key;
+    this.parties.push(newParty).then((snap)=> {key = snap.$key});
+    console.log(key);
+    return key;
   }
 
   getPartyById(partyId: string){

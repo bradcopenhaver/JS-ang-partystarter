@@ -1,12 +1,13 @@
 <div>
   <h3>{{(partyToDisplay | async)?.name}}</h3>
   <h4>{{(partyToDisplay | async)?.type}}</h4>
-  <h4>{{(partyToDisplay | async)?.host}}</h4>
-  <h4>{{(partyToDisplay | async)?.goal}}</h4>
-  <h4>{{(partyToDisplay | async)?.location}}</h4>
-  <h4>{{(partyToDisplay | async)?.details}}</h4>
-  <h4>{{(partyToDisplay | async)?.date}}</h4>
-  <h4>{{(partyToDisplay | async)?.currentFunding}}</h4>
+  <h4>Date of Party: {{(partyToDisplay | async)?.date}}</h4>
+  <h4>Party host: {{(partyToDisplay | async)?.host}}</h4>
+  <h4>Funding goal: ${{(partyToDisplay | async)?.goal}}</h4>
+  <h4>Location: {{(partyToDisplay | async)?.location}}</h4>
+  <h4>Additional Info:</h4>
+  <p>{{(partyToDisplay | async)?.details}}</p>
+  <h4>Current Funding: ${{(partyToDisplay | async)?.currentFunding}}</h4>
 </div>
 <div>
   <app-contribute [selectedParty]="partyToDisplay"></app-contribute>
