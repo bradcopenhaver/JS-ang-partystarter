@@ -1,0 +1,53 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Add New Album to Inventory</h3>
+  </div>
+  <div class="panel-body">
+    <div>
+      <div>
+        <label>Name:</label>
+        <br>
+        <input #newName>
+      </div>
+
+      <div>
+        <label>Party Type</label>
+        <br>
+        <input #newType>
+      </div>
+
+      <div>
+        <label>Party Host:</label>
+        <br>
+        <input #newHost>
+      </div>
+
+      <div>
+        <label>Party Goal:</label>
+        <br>
+        <input #newGoal>
+      </div>
+
+      <div>
+        <label>Party Location:</label>
+        <br>
+        <input #newLocation>
+      </div>
+
+
+      <div>
+        <label>Party Details:</label>
+        <br>
+        <input #newDetails>
+      </div>
+
+      <div>
+        <label>Party Date:</label>
+        <br>
+        <input #newDate>
+      </div>
+    </div>
+  </div>
+</div>
+
+<button (click)="submitForm(newName.value, newType.value, newHost.value, newGoal.value, newLocation.value, newDetails.value, newDate.value)">Add</button>

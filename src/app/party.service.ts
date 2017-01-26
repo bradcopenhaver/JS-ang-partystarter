@@ -14,6 +14,10 @@ export class PartyService {
     return this.parties;
   }
 
+  addParty(newParty: Party) {
+    this.parties.push(newParty);
+  }
+
   getPartyById(partyId: string){
     return this.angularFire.database.object('parties/' + partyId);
   }
@@ -28,8 +32,6 @@ export class PartyService {
   updatePartyFunds(currentParty: FirebaseObjectObservable<any>, amountOfFunds: number) {
     var updatedFunding: number;
     currentParty.subscribe(x => {updatedFunding = parseInt(x.currentFunding) + amountOfFunds});
-    // var currentPartyFunds = partyEntryInFirebase.object('currentFunding/');
-    // var totalFunds = partyEntryInFirebase + amountOfFunds;
     currentParty.update({currentFunding: updatedFunding});
   }
 
